@@ -8,5 +8,5 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './all-todo.component.scss',
 })
 export class AllTodoComponent {
-  title = 'todo.all-todo';
+  title = 'All Todos';
 }
