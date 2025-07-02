@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './todo-detail.component.html',
   styleUrl: './todo-detail.component.scss',
 })
-export class AllTodoComponent {
+export class TodoDetailComponent {
   title = 'Todo Detail';
 }
