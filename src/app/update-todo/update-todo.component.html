@@ -1,1 +1,12 @@
-<p>Update Todos</p>
+<!-- <p>Update Todos</p> -->
+ <form [formGroup]="todoForm" (ngSubmit)="onSubmit()">
+  <label>Title:</label>
+  <input type="text" formControlName="title" />
+
+  <label>
+    <input type="checkbox" formControlName="completed" />
+    Completed
+  </label>
+
+  <button type="submit">Update Todo</button>
+</form>
