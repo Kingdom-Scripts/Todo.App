@@ -1,1 +1,13 @@
-<p>Create Todos</p>
+<div class="create-container">
+  <h2>Add New Todo</h2>
+
+  <form [formGroup]="todoForm" (ngSubmit)="createTodo()">
+    <input
+      type="text"
+      formControlName="title"
+      placeholder="Enter Todo Title"
+      required
+    />
+    <button type="submit" [disabled]="todoForm.invalid">Create</button>
+  </form>
+</div>

@@ -1,1 +1,26 @@
-<p>All Todos</p>
+<div class="todo-container">
+  <h1>Todo List</h1>
+
+  <div class="action-bar">
+    <button routerLink="/create" class="create-btn">+ Create Todo</button>
+  </div>
+
+  <table *ngIf="todos.length > 0" class="todo-table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Date Created</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let todo of todos">
+        <td>{{ todo.title }}</td>
+        <td>{{ todo.dateCreated | date: 'yyyy-MM-dd' }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="todos.length === 0">
+    <p>No todo item.</p>
+  </div>
+</div>
